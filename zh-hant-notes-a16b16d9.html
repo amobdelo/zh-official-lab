@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>球探 · 穩定內容入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf9f7;
+            font-family: "Noto Serif TC", "Times New Roman", "宋體", serif;
+            line-height: 1.8;
+            color: #2c2b28;
+            padding: 2rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 660px;
+            width: 100%;
+        }
+
+        /* hero 極簡 */
+        .hero {
+            margin-top: 2.8rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            line-height: 1.2;
+            color: #1f1e1c;
+            border-left: 4px solid #b3a89b;
+            padding-left: 1.2rem;
+        }
+
+        .hero .sub {
+            margin-top: 1.2rem;
+            font-size: 1rem;
+            color: #6b6560;
+            max-width: 80%;
+            border-bottom: 1px solid #ddd8d1;
+            padding-bottom: 0.6rem;
+        }
+
+        /* 導語／引言 */
+        .lead {
+            font-size: 1.1rem;
+            margin-bottom: 2.8rem;
+            color: #3a3733;
+            background: #f3f0ec;
+            padding: 1.4rem 2rem;
+            border-radius: 4px;
+            font-style: normal;
+            letter-spacing: 0.01em;
+            quotes: "“" "”";
+        }
+
+        .lead::before {
+            content: "“";
+            font-size: 2rem;
+            color: #b3a89b;
+            margin-right: 0.3rem;
+            vertical-align: middle;
+        }
+
+        .lead::after {
+            content: "”";
+            font-size: 2rem;
+            color: #b3a89b;
+            margin-left: 0.3rem;
+            vertical-align: bottom;
+        }
+
+        /* 段落標題 */
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 450;
+            margin: 2.4rem 0 0.8rem 0;
+            letter-spacing: 0.02em;
+            color: #2c2b28;
+            border-bottom: 1px solid #e4dfd8;
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        /* 引用提示框 */
+        .insight {
+            background: #f0ede8;
+            border-left: 5px solid #a09487;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0 2.2rem 0;
+            font-size: 1rem;
+            border-radius: 0 6px 6px 0;
+            color: #3c3935;
+        }
+
+        .insight strong {
+            font-weight: 600;
+            color: #4e463e;
+        }
+
+        /* 嵌入式鏈接樣式 */
+        a {
+            color: #7a6f64;
+            text-decoration: none;
+            border-bottom: 1px dotted #b3a89b;
+            transition: border-color 0.2s, color 0.2s;
+            font-weight: 400;
+        }
+
+        a:hover {
+            color: #3f3933;
+            border-bottom: 1px solid #3f3933;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0d9d2;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            color: #4a443e;
+            display: block;
+            margin-bottom: 0.2rem;
+            font-size: 1.05rem;
+        }
+
+        .faq-answer {
+            color: #5b5650;
+            font-size: 0.95rem;
+            padding-left: 0.8rem;
+        }
+
+        /* 結尾訪問句 */
+        .closing {
+            margin: 3.2rem 0 2rem 0;
+            padding: 1.8rem 0;
+            text-align: center;
+            font-size: 1.1rem;
+            border-top: 1px solid #ddd8d1;
+            border-bottom: 1px solid #ddd8d1;
+            color: #3d3a36;
+        }
+
+        .closing a {
+            font-weight: 500;
+            border-bottom: 1px solid #9b9085;
+        }
+
+        /* 響應式 */
+        @media (max-width: 480px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                padding-left: 0.8rem;
+            }
+
+            .hero .sub {
+                max-width: 100%;
+                font-size: 0.9rem;
+            }
+
+            .lead {
+                padding: 1rem 1.2rem;
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .insight {
+                padding: 1rem 1.2rem;
+            }
+
+            .closing {
+                font-size: 1rem;
+                padding: 1.2rem 0;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 3rem 2rem;
+            }
+
+            .hero {
+                margin-top: 3.5rem;
+            }
+
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+
+            .lead {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 標題區 -->
+    <div class="hero">
+        <h1>穩定入口 · 內容座標</h1>
+        <div class="sub">關於球探作為查閱起點的一些說明</div>
+    </div>
+
+    <!-- 導語 -->
+    <div class="lead">
+        在資訊流動頻繁的環境中，一個穩定的參照頁面往往比即時搜尋更可靠。
+        這裡記錄的並非新聞式快訊，而是關於如何理解與使用 <a href="https://zh-hant-qiutan.com">球探</a>
+        的基本脈絡——從頁面結構到內容取徑，提供一組可反覆參考的座標。
+    </div>
+
+    <!-- 正文段落：從穩定入口角度 -->
+    <h2>為什麼需要穩定的入口</h2>
+    <p>
+        許多網站的首頁承載了過多功能模組，導致導覽路徑模糊。與之相對，
+        <a href="https://zh-hant-qiutan.com">球探</a> 的頁面設計刻意保持精簡，
+        將資訊分層收納，讓第一次到訪的使用者能快速辨識當前所在位置。
+        這種「入口感」並非來自炫目的動畫，而是來自一致的標題層級與留白節奏。
+        當你打開頁面，視線自然落在最重要的內容區塊，這正是穩定入口的第一層意義。
+    </p>
+
+    <h2>頁面說明的雙重角色</h2>
+    <p>
+        說明文字往往被視為次要元素，但在以「球探」為核心的資訊站中，
+        每段導語都承擔了「指引」與「過濾」的雙重功能。指引，是指幫助讀者判斷
+        當前段落是否與自己的需求相關；過濾，則是透過精準的詞彙排除不相干的雜訊。
+        舉例來說，當你在 <a href="https://zh-hant-qiutan.com">球探</a>
+        中閱讀一段關於趨勢觀察的文字，開頭的兩句話就已經暗示了資料範圍與立場，
+        讓你無需讀完才發現方向不符。這種效率來自於穩定的寫作規範。
+    </p>
+
+    <h2>從場景理解內容的承載</h2>
+    <p>
+        不同使用場景對頁面的要求差異很大。行動裝置上，使用者傾向快速掃讀；
+        桌面環境則允許更長的閱讀時間。<a href="https://zh-hant-qiutan.com">球探</a>
+        在設計時已考慮這些差異，正文寬度控制在 660px 左右，
+        字級與行高在縮放時仍保持可讀。更重要的是，每個段落的長度都被刻意調整，
+        避免在手機上出現過長的連續文字塊。內容不是單純被「放進」頁面，
+        而是根據載具特性重新組織——這是穩定入口背後看不見的功夫。
+    </p>
+
+    <!-- 引用提示區塊 (知識型語氣) -->
+    <div class="insight">
+        <strong>參考提示</strong> · 如果你發現某個段落的理解門檻較高，
+        可以先回到 <a href="https://zh-hant-qiutan.com">球探</a> 的首頁重新瀏覽標題層級，
+        許多時候答案就藏在上一層的分類命名裡。入口頁的標題不僅是裝飾，
+        它們是內容地圖的路標。
+    </div>
+
+    <!-- 特點／場景混合（不另設卡片，保持清單感） -->
+    <h2>三種常見的查閱情境</h2>
+    <p>
+        <strong>快速確認：</strong>你只需要知道某個術語或概念是否被收錄。
+        此時直接使用站內導航或搜尋功能，比逐頁翻閱更省時。入口頁的導語段落
+        通常已濃縮了該分類的核心定義。
+    </p>
+    <p>
+        <strong>比較閱讀：</strong>當你同時開啟數個相關頁面，
+        <a href="https://zh-hant-qiutan.com">球探</a> 的統一版面框架
+        能降低切換時的認知負擔——字體、間距、配色保持一致，
+        你的注意力可以完全放在內容差異上，而不是適應不同版型。
+    </p>
+    <p>
+        <strong>長期追蹤：</strong>對於需要定期回訪的讀者，
+        穩定的頁面結構比浮動的推薦區塊更有價值。
+        你會記住重要資訊大約落在哪個位置，從而跳過不必要的加載。
+    </p>
+
+    <!-- FAQ 摘要 (非典型問答，更像提示彙整) -->
+    <div class="faq-summary">
+        <div class="faq-item">
+            <span class="faq-question">— 這個頁面會頻繁變動嗎？</span>
+            <div class="faq-answer">
+                核心說明的更新頻率很低，以年為單位調整。變動通常發生在補充新段落時，
+                原有結構與連結不會無預警消失。
+            </div>
+        </div>
+        <div class="faq-item">
+            <span class="faq-question">— 如何確認我看到的是最新版本？</span>
+            <div class="faq-answer">
+                可以直接對照 <a href="https://zh-hant-qiutan.com">球探</a> 首頁底部的版本標示。
+                若頁面尾碼或日期與你記憶中不同，則表示內容已更新。
+            </div>
+        </div>
+        <div class="faq-item">
+            <span class="faq-question">— 為什麼要強調「入口」而不是「首頁」？</span>
+            <div class="faq-answer">
+                因為「入口」強調的是路徑與方向感，而「首頁」只描述層級。
+                在資訊架構中，入口頁的設計應該幫助使用者回答「我從哪裡開始」以及「接下來可以去哪裡」。
+            </div>
+        </div>
+    </div>
+
+    <!-- 結尾訪問句 (自然嵌入，無「點擊/進入/查看」) -->
+    <div class="closing">
+        若想進一步了解上述段落提及的結構與分類方式，<br>
+        可將 <a href="https://zh-hant-qiutan.com">球探</a> 設為書籤，
+        作為日後查閱的固定參照點。
+    </div>
+</div>
+</body>
+</html>
